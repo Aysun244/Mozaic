@@ -13,9 +13,9 @@ public class ProfessionController(AppDbContext _context) : Controller
     {
         var professions = await _context.Professions.Select(x => new ProfessionGetVM()
         {
-            Id = x.Id,         
+            Id = x.Id,
             Name = x.Name,
-           
+
         }).ToListAsync();
         return View(professions);
     }
@@ -36,7 +36,7 @@ public class ProfessionController(AppDbContext _context) : Controller
 
         Profession profession = new Profession()
         {
-            Name = model.Name,         
+            Name = model.Name,
         };
 
         await _context.Professions.AddAsync(profession);
@@ -64,9 +64,9 @@ public class ProfessionController(AppDbContext _context) : Controller
         if (profession == null) return NotFound();
         ProfessionUpdateVM model = new ProfessionUpdateVM()
         {
-            Id = profession.Id,          
+            Id = profession.Id,
             Name = profession.Name,
-           
+
         };
         return View(model);
     }
@@ -78,11 +78,14 @@ public class ProfessionController(AppDbContext _context) : Controller
         if (!id.HasValue || id < 1)
             return BadRequest();
 
+        if (!ModelState.IsValid)
+            return View(model);
+
         var profession = await _context.Professions.FirstOrDefaultAsync(x => x.Id == id);
         if (profession == null) return NotFound();
 
         profession.Name = model.Name;
-        
+
         await _context.SaveChangesAsync();
         return RedirectToAction("Index");
     }

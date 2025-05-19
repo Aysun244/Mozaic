@@ -67,14 +67,14 @@
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">@RenderBody()</a>
+                        <a class="collapse-item active" href="blank.html"></a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" asp-action="Index" asp-controller="Architect" >
                     <i class="fas fa-fw fa-users"></i>
                     <span>Architect</span>
                 </a>
@@ -82,7 +82,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" asp-action="Index" asp-controller="Profession">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Profession</span>
                 </a>
@@ -318,7 +318,9 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">
+                        @RenderBody()
+                    </h1>
 
                 </div>
                 <!-- /.container-fluid -->

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Mozaic",
+    "\\Mozaic\\Areas",
+    "\\Mozaic\\Areas\\Admin",
+    "\\Mozaic\\Areas\\Admin\\Controllers",
+    "\\Mozaic\\Areas\\Admin\\Views",
+    "\\Mozaic\\Areas\\Admin\\Views\\Architect",
+    "\\Mozaic\\ViewModelsVM",
+    "\\Mozaic\\ViewModelsVM\\ProfessionVM"
+  ],
+  "SelectedNode": "\\Mozaic\\ViewModelsVM\\ProfessionVM\\ProfessionGetVM.cs",
+  "PreviewInSolutionExplorer": false
+}

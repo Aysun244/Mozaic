@@ -7,5 +7,7 @@
         public string Description { get; set; }
         public int ProfessionId { get; set; }
         public Profession Profession { get; set; }
+
+      
     }
 }

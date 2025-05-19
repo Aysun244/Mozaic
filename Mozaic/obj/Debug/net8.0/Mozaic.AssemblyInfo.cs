@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mozaic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a064f63bb47091469f516ce5df3bdaaa9198f71c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mozaic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mozaic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

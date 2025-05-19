@@ -5,10 +5,12 @@
 
 <table class="table">
     <thead>
+        <a class="btn btn-success" asp-action="Create">Create</a>
         <tr>
             <th scope="col">No</th>
             <th scope="col">Image</th>
             <th scope="col">FullName</th>
+            <th scope="col">Profession</th>
             <th scope="col">Description</th>
             <th scope="col">Actions</th>
         </tr>
@@ -17,14 +19,14 @@
         @foreach (var architect in Model)
         {
         <tr>
-            <th scope="row">@(order++)</th>
+            <td scope="row">@(order++)</td>
             <td><img width="65" height="65" src="~/images/architect/@architect.ImagePath"/></td>
             <td>@architect.FullName</td>
+                <td>@architect.Profession.Name</td>
                 <td>@architect.Description</td>
-
                 <td>
-                    <a class=" btn btn-primary" asp-action="Update" asp-route-id="@course.Id">Update</a>
-                    <a class=" btn btn-danger" asp-action="Delete" asp-route-id="@course.Id">Delete</a>
+                    <a class=" btn btn-primary" asp-action="Update" asp-route-id="@architect.Id">Update</a>
+                    <a class=" btn btn-danger" asp-action="Delete" asp-route-id="@architect.Id">Delete</a>
                 </td>
         </tr>          
         }
